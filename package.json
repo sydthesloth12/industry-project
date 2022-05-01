@@ -1,0 +1,25 @@
+{
+  "name": "industry-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sydthesloth12/industry-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sydthesloth12/industry-project/issues"
+  },
+  "homepage": "https://github.com/sydthesloth12/industry-project#readme",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.14.0",
+    "mocha": "^10.0.0"
+  }
+}
