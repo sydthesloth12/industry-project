@@ -4,7 +4,7 @@ const router = express.Router()
 
 // Get metric definitions 
 router.get('/', (req, res) => {
-  const restData = resturauntRepository.getRestData()
+  const restData = restDataRepository.getRestData()
 
   res.send(restData)
 })
