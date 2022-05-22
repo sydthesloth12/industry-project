@@ -1,8 +1,12 @@
-const express = require('express');
-const customSearchQuery = express();
+const express = require('express')
+const customSearchQuery = express()
 
-customSearchQuery.use(express.json()); 
+const metricDefinitionRouter = require("./routes/metricDefinition")
 
-console.log("This works, on http://localhost:3000")
+customSearchQuery.use(express.json())
 
-customSearchQuery.listen(3000);
+customSearchQuery.use("/metricDefinitions", metricDefinitionRouter)
+
+console.log('This works, on http://localhost:3000')
+
+customSearchQuery.listen(3000)
