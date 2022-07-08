@@ -5,7 +5,7 @@ const router = express.Router()
 // Get metric definitions 
 router.get('/', async (req, res) => {
   try {
-    const restaurants = await models.restarauntModel.findAll()
+    const restaurants = await models.Restaurants.findAll()
 
     return res.send(restaurants)
   }
