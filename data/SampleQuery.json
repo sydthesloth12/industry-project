@@ -1,7 +1,5 @@
 {
-  "restaurantIds": [
-    1
-  ],
+  "restaurantIds": [1],
   "fromDate": "2022-05-11T00:00:00.000Z",
   "toDate": "2022-05-11T00:00:00.000Z",
   "fromHour": 6,

@@ -1,14 +1,19 @@
 const express = require('express')
+const cors = require('cors')
 const customSearchQuery = express()
 
-const metricDefinitionRouter = require("./routes/metricDefinition")
-const searchRouter = require("./routes/transaction")
-
 customSearchQuery.use(express.json())
+customSearchQuery.use(cors())
 
-customSearchQuery.use("/metricDefinitions", metricDefinitionRouter)
-customSearchQuery.use("/search", searchRouter)
+const metricDefinitionRouter = require('./controllers/metricDefinition')
+const searchRouter = require('./controllers/transaction')
+const restaurantRouter = require('./controllers/resturaunt')
+const transactionRouter = require('./controllers/transaction')
 
-console.log('This works, on http://localhost:3000')
+customSearchQuery.use('/metricDefinitions', metricDefinitionRouter)
+customSearchQuery.use('/restaraunts', restaurantRouter)
+customSearchQuery.use('/transactions', transactionRouter)
 
-customSearchQuery.listen(3000)
+customSearchQuery.listen(1337, () => {
+  console.log('listening at http://localhost:1337')
+})
