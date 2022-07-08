@@ -1,6 +1,6 @@
-const transactions = (connection, Sequelize, restaraunts) => {
+const transactions = (connection, Sequelize, Restaurants) => {
   return connection.define('transactions', {
-    RestaurantId: Sequelize.INTEGER,
+    RestaurantId: {type: Sequelize.INTEGER, references: {model: Restaurants, key: 'id'} },
     BusDt: Sequelize.DATE,
     OrderNumber: Sequelize.INTEGER,
     OrderTime: Sequelize.DATE,
@@ -13,6 +13,9 @@ const transactions = (connection, Sequelize, restaraunts) => {
     DiscountRatio: Sequelize.FLOAT,
     ItemDeletedAmount: Sequelize.FLOAT,
     RefundAmount: Sequelize.FLOAT
+  },
+  {
+    timestamps: false
   })
 }
 

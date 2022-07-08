@@ -18,6 +18,9 @@ const MetricDefinitions = (connection, Sequelize) => {
         decimalPlaces: {
           type: Sequelize.INTEGER
         },
+    },
+    {
+      timestamps: false
     })
 }
 
