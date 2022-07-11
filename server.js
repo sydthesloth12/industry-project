@@ -6,13 +6,12 @@ customSearchQuery.use(express.json())
 customSearchQuery.use(cors())
 
 const metricDefinitionRouter = require('./controllers/metricDefinition')
-const searchRouter = require('./controllers/transaction')
+const searchRouter = require('./controllers/search')
 const restaurantRouter = require('./controllers/resturaunt')
-const transactionRouter = require('./controllers/transaction')
 
 customSearchQuery.use('/metricDefinitions', metricDefinitionRouter)
 customSearchQuery.use('/restaraunts', restaurantRouter)
-customSearchQuery.use('/transactions', transactionRouter)
+customSearchQuery.use('/search', searchRouter)
 
 customSearchQuery.listen(1337, () => {
   console.log('listening at http://localhost:1337')
