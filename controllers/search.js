@@ -7,11 +7,11 @@ const router = express.Router()
 router.post('/', async (req, res) => {
     try {
     const sequelizeOperators = {
-        GreaterThan: Op.gt,
-        LessThan: Op.lt,
-        GreaterThanOrEqual: Op.gte,
-        LessThanOrEqual: Op.lte, 
-        Equal: Op.eq
+        '>': Op.gt,
+        '<': Op.lt,
+        '>=': Op.gte,
+        '<=': Op.lte, 
+        '=': Op.eq
     }
 
     const { 
