@@ -2,14 +2,14 @@
   {
     "Id": 1,
     "MetricCode": "TotalAmount",
-    "Alias": "Transaction Total Amount $",
+    "Alias": "Total Amount $",
     "DataType": "Money",
     "DecimalPlaces": 2
   },
   {
     "Id": 2,
     "MetricCode": "NetAmount",
-    "Alias": "Transaction Net Amount $",
+    "Alias": "Net Amount $",
     "DataType": "Money",
     "DecimalPlaces": 2
   },
@@ -30,14 +30,14 @@
   {
     "Id": 5,
     "MetricCode": "DiscountAmount",
-    "Alias": "Transaction Discount Amount $",
+    "Alias": "Discount Amount $",
     "DataType": "Money",
     "DecimalPlaces": 2
   },
   {
     "Id": 6,
     "MetricCode": "ItemDeletedAmount",
-    "Alias": "Transaction Discount Ratio %",
+    "Alias": "Discount Ratio %",
     "DataType": "Percent",
     "DecimalPlaces": 2
   },
@@ -51,7 +51,7 @@
   {
     "Id": 8,
     "MetricCode": "RefundAmount",
-    "Alias": "Transaction Refund Amount $",
+    "Alias": "Refund Amount $",
     "DataType": "Money",
     "DecimalPlaces": 2
   }

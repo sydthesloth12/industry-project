@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "env-cmd nodemon server.js",
-    "dev:migrate": "env-cmd sequelize db:migrate --env development --config ./config/config.js",
-    "lint": "eslint --format codeframe .",
-    "lint:fix": "eslint --fix --format codeframe ."
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "./node_modules/.bin/env-cmd ./node_modules/.bin/nodemon server.js",
+    "dev:client": "cd client && npm start",
+    "dev:client:build": "cd client && npm run build",
+    "dev:migrate": "./node_modules/.bin/env-cmd ./node_modules/.bin/sequelize db:migrate --env development --config ./config/config.js",
+    "lint:fix": "./node_modules/.bin/eslint --fix --format codeframe .",
+    "dev:client:test": "cd client && npm test",
+    "dev:server:test": "./node_modules/.bin/mocha tests/**/*.test.js",
+    "lint": "npm run lint:pug && npm run lint:eslint",
+    "lint:pug": "./node_modules/.bin/pug-lint .",
+    "lint:eslint": "./node_modules/.bin/eslint --format codeframe ."
   },
   "repository": {
     "type": "git",

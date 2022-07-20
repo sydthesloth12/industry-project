@@ -9,7 +9,7 @@ const MultipleSelect = (props) => {
     return {...restaurant, value: restaurant.id, label: restaurant.name}
   })
 
-  return <MultiSelect data={restaurantOptions} value={selectedRestaurants} onChange={setSelectedRestaurants} clearable clearButtonLabel="Clear select field"/>;
+  return <MultiSelect label={'Restaurants'} data={restaurantOptions} value={selectedRestaurants} onChange={setSelectedRestaurants} clearable clearButtonLabel="Clear select field"/>;
 }
 
 export default MultipleSelect
